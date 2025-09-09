@@ -1,0 +1,18 @@
+/*
+ * Device Tree Overlay für DFRobot FireBeetle 2 ESP32-C6
+ * Diese Konfiguration definiert die onboard LED an GPIO15 (D13)
+ */
+
+/ {
+    leds {
+        compatible = "gpio-leds";
+        led0: led_0 {
+            gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
+            label = "User LED";
+        };
+    };
+
+    aliases {
+        led0 = &led0;
+    };
+};

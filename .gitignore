@@ -2,6 +2,8 @@
 .temp/
 .libs/
 
+build
+
 # Object files, generates by linker
 *.lo
 *.la

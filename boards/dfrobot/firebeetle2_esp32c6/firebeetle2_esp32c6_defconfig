@@ -1,0 +1,24 @@
+# DFRobot FireBeetle 2 ESP32-C6 board configuration
+
+# Basic ESP32-C6 configuration
+CONFIG_SOC_SERIES_ESP32C6=y
+CONFIG_SOC_ESP32C6=y
+CONFIG_BOARD_FIREBEETLE2_ESP32C6=y
+
+# Enable console and GPIO
+CONFIG_CONSOLE=y
+CONFIG_SERIAL=y
+CONFIG_GPIO=y
+
+# Enable GPIO interrupt for buttons
+CONFIG_GPIO_ESP32=y
+
+# Flash and memory configuration  
+CONFIG_FLASH_SIZE=4096
+CONFIG_FLASH_BASE_ADDRESS=0x0
+
+# Enable bootloader
+CONFIG_BOOTLOADER_ESP_IDF=y
+
+# Enable USB CDC for debugging (optional)
+CONFIG_ESP_CONSOLE_USB_CDC=y

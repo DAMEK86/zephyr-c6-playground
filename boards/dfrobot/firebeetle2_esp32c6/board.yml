@@ -1,0 +1,6 @@
+board:
+  name: firebeetle2_esp32c6
+  full_name: DFRobot FireBeetle 2 ESP32-C6
+  vendor: dfrobot
+  socs:
+  - name: esp32c6

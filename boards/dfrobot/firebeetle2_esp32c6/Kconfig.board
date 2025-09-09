@@ -1,0 +1,7 @@
+# DFRobot FireBeetle 2 ESP32-C6 board configuration options
+
+# Copyright (c) 2024 DFRobot
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_FIREBEETLE2_ESP32C6
+	select SOC_ESP32C6

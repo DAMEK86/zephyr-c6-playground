@@ -42,4 +42,11 @@
 			output-high;
 		};
 	};
+
+	ledc0_default: ledc0_default {
+		group1 {
+			pinmux = <LEDC_CH0_GPIO15>;
+			output-enable;
+		};
+	};
 };

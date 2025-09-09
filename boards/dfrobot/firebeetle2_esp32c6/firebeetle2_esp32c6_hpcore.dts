@@ -8,6 +8,7 @@
 #include <espressif/esp32c6/esp32c6_wroom_n4.dtsi>
 #include "firebeetle2_esp32c6_hpcore-pinctrl.dtsi"
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <zephyr/dt-bindings/pwm/pwm.h>
 #include <espressif/partitions_0x0_default.dtsi>
 
 / {
@@ -32,7 +33,7 @@
 	leds {
 		compatible = "gpio-leds";
 		user_led: led_0 {
-			gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpio0 14 GPIO_ACTIVE_HIGH>;
 			label = "User LED";
 		};
 	};
@@ -98,4 +99,16 @@
 
 &esp32_bt_hci {
 	status = "okay";
+};
+
+&ledc0 {
+	status = "okay";
+	pinctrl-0 = <&ledc0_default>;
+	pinctrl-names = "default";
+	#address-cells = <1>;
+	#size-cells = <0>;
+	channel0@0 {
+		reg = <0x0>;
+		timer = <0>;
+	};
 };
